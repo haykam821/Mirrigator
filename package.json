@@ -3,6 +3,9 @@
 	"name": "mirrigator",
 	"description": "Creates mirrors for GitHub repositories on GitLab.",
 	"main": "./src/index.js",
+	"bin": {
+		"mirrigator": "./src/index.js"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint \"./**/*.js\" --ignore-path .gitignore"
@@ -33,5 +36,10 @@
 	},
 	"eslintConfig": {
 		"extends": "eslint-config-haykam"
+	},
+	"dependencies": {
+		"@octokit/rest": "^18.0.6",
+		"caporal": "^1.4.0",
+		"got": "^11.8.0"
 	}
 }
